@@ -394,12 +394,24 @@ body {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  user-select: none;
 }
 
 .game-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--card-hover-shadow);
+  border-color: #ffd4dc;
+}
+
+.game-card:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+.game-card:hover .btn-play-primary {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(255, 71, 87, 0.45);
 }
 
 /* 顶部主题条纹背景 */

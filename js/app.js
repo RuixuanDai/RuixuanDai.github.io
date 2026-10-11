@@ -171,7 +171,7 @@
     if (noResultsState) noResultsState.style.display = 'none';
 
     gamesGrid.innerHTML = filtered.map(game => `
-      <div class="game-card" data-id="${game.id}">
+      <div class="game-card" data-id="${game.id}" onclick="handleCardClick(event, '${game.id}')">
         <div class="card-header-bar">
           <div class="game-icon-bubble" style="background: ${game.colorGradient};">
             <span>${game.icon}</span>
@@ -200,10 +200,10 @@
           <button class="candy-btn btn-play-primary" onclick="launchGamePlayer('${game.id}')">
             <span>🎮 立即畅玩</span>
           </button>
-          <a href="${game.url}" target="_blank" rel="noopener" class="candy-btn btn-icon-square" title="新标签页打开">
+          <a href="${game.url}" target="_blank" rel="noopener" class="candy-btn btn-icon-square btn-secondary-action" onclick="event.stopPropagation();" title="新标签页打开">
             <span>🚀</span>
           </a>
-          <button class="candy-btn btn-icon-square share-btn" onclick="openShareModal('${game.id}')" title="在 iPad 扫码玩">
+          <button class="candy-btn btn-icon-square share-btn btn-secondary-action" onclick="event.stopPropagation(); openShareModal('${game.id}');" title="在 iPad 扫码玩">
             <span>📱</span>
           </button>
         </div>
@@ -212,7 +212,18 @@
   }
 
   // -------------------------------------------------------------------------
-  // 4. 沉浸式内嵌游戏播放器 (Iframe Player)
+  // 4. 点击卡片全区域直接启动游戏
+  // -------------------------------------------------------------------------
+  window.handleCardClick = function (event, gameId) {
+    // 若点击的是次要操作按钮（新窗口打开或扫码），不触发卡片全屏进入
+    if (event.target.closest('.btn-secondary-action')) {
+      return;
+    }
+    launchGamePlayer(gameId);
+  };
+
+  // -------------------------------------------------------------------------
+  // 5. 沉浸式内嵌游戏播放器 (Iframe Player)
   // -------------------------------------------------------------------------
   window.launchGamePlayer = function (gameId) {
     const game = GAMES_DATA.find(g => g.id === gameId);
