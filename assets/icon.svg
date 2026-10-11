@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9A8B"/>
+      <stop offset="50%" stop-color="#FF6A88"/>
+      <stop offset="100%" stop-color="#FF99AC"/>
+    </linearGradient>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE600"/>
+      <stop offset="100%" stop-color="#FFB800"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded App Icon Background -->
+  <rect x="4" y="4" width="92" height="92" rx="24" fill="url(#bgGrad)" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+  
+  <!-- Arcade Controller Body -->
+  <rect x="20" y="32" width="60" height="38" rx="14" fill="#FFFFFF" opacity="0.95"/>
+  
+  <!-- D-Pad -->
+  <path d="M30 46h10v-5h4v5h10v4h-10v5h-4v-5h-10z" fill="#4A5568" opacity="0.15"/>
+  <rect x="33" y="48" width="8" height="6" rx="2" fill="#3B82F6"/>
+  <rect x="35" y="45" width="4" height="12" rx="2" fill="#3B82F6"/>
+  
+  <!-- Action Buttons -->
+  <circle cx="63" cy="48" r="3.5" fill="#EF4444"/>
+  <circle cx="70" cy="53" r="3.5" fill="#10B981"/>
+  <circle cx="56" cy="53" r="3.5" fill="#F59E0B"/>
+  
+  <!-- Floating Golden Star -->
+  <polygon points="50,14 53,23 62,23 55,29 57,38 50,33 43,38 45,29 38,23 47,23" fill="url(#starGrad)" stroke="#FFA000" stroke-width="0.8"/>
+  
+  <!-- Joyful Face on Controller -->
+  <circle cx="48" cy="53" r="1.5" fill="#4B5563"/>
+  <circle cx="52" cy="53" r="1.5" fill="#4B5563"/>
+  <path d="M48 56 Q50 58 52 56" stroke="#4B5563" stroke-width="1" fill="none" stroke-linecap="round"/>
+</svg>

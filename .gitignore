@@ -1,0 +1,11 @@
+# System & Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+
+# Dependencies & Build
+node_modules/
+dist/
