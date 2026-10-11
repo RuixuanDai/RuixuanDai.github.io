@@ -49,6 +49,10 @@
   // iPad 指南弹窗
   const ipadGuideModal = document.getElementById('ipadGuideModal');
 
+  // 免责声明弹窗与按钮
+  const disclaimerBtn = document.getElementById('disclaimerBtn');
+  const disclaimerModal = document.getElementById('disclaimerModal');
+
   // -------------------------------------------------------------------------
   // 2. 纯前端 Web Audio API 合成音效 (无需额外 mp3 资源)
   // -------------------------------------------------------------------------
@@ -359,10 +363,24 @@
     if (ipadGuideModal) ipadGuideModal.style.display = 'none';
   };
 
+  // -------------------------------------------------------------------------
+  // 7. 免责声明模态框
+  // -------------------------------------------------------------------------
+  window.openDisclaimerModal = function () {
+    AudioEngine.playPop();
+    if (disclaimerModal) disclaimerModal.style.display = 'flex';
+  };
+
+  window.closeDisclaimerModal = function () {
+    AudioEngine.playPop();
+    if (disclaimerModal) disclaimerModal.style.display = 'none';
+  };
+
   window.closeModalsOnBackdrop = function (e) {
     if (e.target.classList.contains('modal-overlay')) {
       if (qrModalOverlay) qrModalOverlay.style.display = 'none';
       if (ipadGuideModal) ipadGuideModal.style.display = 'none';
+      if (disclaimerModal) disclaimerModal.style.display = 'none';
     }
   };
 
@@ -376,7 +394,7 @@
   };
 
   // -------------------------------------------------------------------------
-  // 7. 事件监听绑定
+  // 8. 事件监听绑定
   // -------------------------------------------------------------------------
   function setupEventListeners() {
     // 搜索输入
@@ -397,6 +415,11 @@
         clearSearchBtn.style.display = 'none';
         filterAndRenderGames();
       });
+    }
+
+    // 免责声明按钮
+    if (disclaimerBtn) {
+      disclaimerBtn.addEventListener('click', window.openDisclaimerModal);
     }
 
     // 音效开关
@@ -431,6 +454,8 @@
           closeShareModal();
         } else if (ipadGuideModal && ipadGuideModal.style.display === 'flex') {
           closeIpadGuide();
+        } else if (disclaimerModal && disclaimerModal.style.display === 'flex') {
+          closeDisclaimerModal();
         } else if (gamePlayerModal && gamePlayerModal.style.display === 'flex') {
           closeGamePlayer();
         }

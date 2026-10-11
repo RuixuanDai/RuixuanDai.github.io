@@ -52,6 +52,11 @@
         </div>
 
         <div class="header-actions">
+          <button id="disclaimerBtn" class="pill-btn disclaimer-btn" title="查看免责声明与条款">
+            <span>🛡️</span>
+            <span class="btn-text">免责声明</span>
+          </button>
+
           <button id="soundToggleBtn" class="pill-btn sound-btn" title="开关游戏音效" aria-label="开关音效">
             <span id="soundIcon">🔊</span>
             <span class="btn-text">音效: 开</span>
@@ -100,6 +105,10 @@
           <a href="https://github.com/RuixuanDai" target="_blank" rel="noopener" class="footer-link">
             <span>🐙 GitHub 开发者主页</span>
           </a>
+          <span class="dot">•</span>
+          <button class="footer-link-btn" onclick="openDisclaimerModal()">
+            <span>🛡️ 免责声明</span>
+          </button>
           <span class="dot">•</span>
           <button class="footer-link-btn" onclick="openShareModal('portal')">
             <span>📲 分享本网站二维码</span>
@@ -219,6 +228,42 @@
 
       <button class="candy-btn btn-primary" onclick="closeIpadGuide()" style="width: 100%; margin-top: 20px;">
         我学会啦，去玩游戏！✨
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== 模态框 4: 免责声明模态框 ==================== -->
+  <div class="modal-overlay" id="disclaimerModal" style="display: none;" onclick="closeModalsOnBackdrop(event)">
+    <div class="modal-card modal-large">
+      <button class="modal-close-btn" onclick="closeDisclaimerModal()">✕</button>
+      <div class="modal-icon-badge">🛡️</div>
+      <h3 class="modal-title">免责声明与服务条款</h3>
+      <p class="modal-desc">欢迎使用儿童益智游戏乐园！请在陪伴小朋友体验前了解以下事项：</p>
+
+      <div class="disclaimer-content-list">
+        <div class="disclaimer-item">
+          <div class="disclaimer-item-title">🎈 1. 适用目的与公益性</div>
+          <div class="disclaimer-item-text">本平台所有游戏（包括数学思维、汉字描红、三子棋等）旨在为儿童提供趣味启蒙与亲子互动，纯属个人非商业性质的开源公益作品，所有内容免费体验，绝无诱导消费或内购。</div>
+        </div>
+
+        <div class="disclaimer-item">
+          <div class="disclaimer-item-title">👀 2. 家长监护与健康护眼提示</div>
+          <div class="disclaimer-item-text">建议未成年人（儿童）在家长或监护人陪同指导下适度体验。请注意劳逸结合与用眼卫生，单次持续游玩时间建议不超过 20-30 分钟。</div>
+        </div>
+
+        <div class="disclaimer-item">
+          <div class="disclaimer-item-title">🔒 3. 绿色纯净与隐私保护</div>
+          <div class="disclaimer-item-text">本平台为纯静态前端运行，<strong>绝不收集、不存储、不上传</strong>任何儿童个人身份信息或设备隐私数据，无第三方广告追踪，守护孩子纯净安全的游玩环境。</div>
+        </div>
+
+        <div class="disclaimer-item">
+          <div class="disclaimer-item-title">⚖️ 4. 免责与知识产权说明</div>
+          <div class="disclaimer-item-text">开发者已尽力确保游戏内容的健康、安全与准确性，但不对因设备兼容性、网络故障等原因导致的偶然异常承担责任。使用的部分开源组件版权归原开源作者所有。如对内容有任何疑问或建议，欢迎联系开发者。</div>
+        </div>
+      </div>
+
+      <button class="candy-btn btn-primary" onclick="closeDisclaimerModal()" style="width: 100%; margin-top: 20px;">
+        已阅读并知悉 ✨
       </button>
     </div>
   </div>
