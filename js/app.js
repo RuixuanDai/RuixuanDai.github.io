@@ -484,6 +484,12 @@
     renderCategories();
     filterAndRenderGames();
     setupEventListeners();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
   }
 
   // DOM 准备完成后启动

@@ -1,0 +1,22 @@
+{
+  "name": "儿童益智游戏乐园 · Kid Web Games Portal",
+  "short_name": "益智游戏乐园",
+  "description": "专为儿童与家庭打造的高品质网页益智游戏聚合乐园。包含童趣数学小王国、快乐小书法家、益智三子棋乐园，支持 iPad 满屏畅玩！",
+  "lang": "zh-CN",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#FFF5F7",
+  "theme_color": "#ff758c",
+  "categories": ["education", "kids", "games"],
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

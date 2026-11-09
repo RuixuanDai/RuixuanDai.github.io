@@ -2,7 +2,9 @@
 
 > 专为儿童与家庭打造的高品质网页益智游戏聚合乐园。无广告、纯净沉浸，支持 iPad 平板触屏满屏畅玩！
 
-🌐 **在线乐园地址**: [https://ruixuandai.github.io/](https://ruixuandai.github.io/)
+🌐 **在线乐园地址**:
+- **Cloudflare Pages (推荐 · 全球高速与 AI 语音)**: [https://kid-navigator.pages.dev/](https://kid-navigator.pages.dev/)
+- **GitHub Pages 镜像**: [https://ruixuandai.github.io/](https://ruixuandai.github.io/)
 
 ---
 
@@ -10,9 +12,9 @@
 
 | 游戏名称 | 学科领域 | 适合年龄 | 在线体验链接 |
 | :--- | :--- | :--- | :--- |
-| **🧮 童趣数学小王国** | 数学启蒙 / 进阶思维 | 5 - 8 岁 | [立即游玩](https://ruixuandai.github.io/kid-math-game/) |
-| **✍️ 快乐小书法家** | 汉字描红 / 笔顺动画 | 4 - 8 岁 | [立即游玩](https://ruixuandai.github.io/chinese-writing/) |
-| **🌟 益智三子棋乐园** | 策略对弈 / 亲子双人 | 全年龄 | [立即游玩](https://ruixuandai.github.io/kid-tic-tac-toe/) |
+| **🧮 童趣数学小王国** | 数学启蒙 / 22款进阶思维 | 5 - 8 岁 | [立即游玩 (Cloudflare)](https://kid-math-game.pages.dev/) |
+| **✍️ 快乐小书法家** | 汉字描红 / 400字分级词库 | 4 - 8 岁 | [立即游玩 (Cloudflare)](https://chinese-writing.pages.dev/) |
+| **🌟 益智三子棋乐园** | 策略对弈 / 满3消1与扭蛋屋 | 全年龄 | [立即游玩 (Cloudflare)](https://kid-tic-tac-toe.pages.dev/) |
 
 ---
 
